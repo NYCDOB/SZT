@@ -48,9 +48,12 @@
 				  }
             }).then(
                     function() {
-						var viewerType = StreetSmartApi.ViewerType.PANORAMA
-                        console.log('Api: init: success!');
-                        StreetSmartApi.open("-74.00583686261976,40.71426644277493", 
+		var xy_coord = window.location.hash.substring(1)
+		//var xy_coord = "980883.9854629387,195566.15336541837";
+                var viewerType = StreetSmartApi.ViewerType.PANORAMA
+                console.log('Api: init: success!');
+                //StreetSmartApi.open("980883.9854629387,195566.15336541837",
+		StreetSmartApi.open(xy_coord,
 							{	
 								viewerType: viewerType,
 								srs: 'EPSG:4326',       
